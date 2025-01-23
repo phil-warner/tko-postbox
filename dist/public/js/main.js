@@ -1,6 +1,18 @@
 import ko from "@tko/build.reference";
 import 'knockout-postbox';
 import { Contact } from './contact';
+import contactComponent from '../components/contact.html';
+
+
+ko.components.register('contact-component', {
+  template: contactComponent
+});
+
+
+ko.postbox.subscribe('contact-subscribe', (value) => {
+  alert(`${value.firstName} ${value.lastName} subscribed`);
+});
+
 
 const Main = function () {
 

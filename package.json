@@ -8,16 +8,16 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "build:default": "rollup --config rollup.config-default.mjs",
-    "build": "npm-run-all build:*"
+    "start": "NODE_ENV=development PORT=3000 node dist/app.js",
+    "build": "rollup --config rollup.config-default.mjs"
   },
   "dependencies": {
     "@tko/build.reference": "^4.0.0-beta1.7",
     "ejs": "^3.1.10",
     "express": "^4.17.1",
     "html": "^1.0.0",
-    "knockout-postbox": "^0.6.1"
+    "knockout-postbox": "^0.6.1",
+    "path": "^0.12.7"
   },
   "repository": {
     "type": "git",
@@ -35,11 +35,13 @@
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-multi-entry": "^6.0.1",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "commonjs": "^0.0.1",
     "from": "^0.1.7",
     "import": "^0.0.6",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-html": "^0.2.1"
   }
 }

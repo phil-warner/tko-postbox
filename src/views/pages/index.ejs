@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <titleTKO-Postbox</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Menu</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <header>
+                <h2>TKO-Postbox</h2>
+                <p>Opened on <time datetime="<%= time %>"><%= new Date(time).toLocaleDateString() %></time></p>
+            </header>
+            <p></p>
+        </article>
+
+        <article>
+              <h2>Contacts</h2>
+              <table></table>
+                  <thead>
+                      <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Subscribed</th>
+                      </tr>
+                  </thead>
+                  <tbody data-bind="foreach: contacts">
+                    <tr data-bind="component: { name: 'contact-component', params: $data }"></tr>
+                  </tbody>
+              </table>
+        </article>
+
+    </section>
+
+    <aside>
+        <h2></h2>
+        <p></p>
+    </aside>
+
+    <footer>
+        <p></p>
+    </footer>
+    <script type="module" src="/public/js/default.bundle.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

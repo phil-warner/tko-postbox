@@ -22,18 +22,26 @@
     <section>
         <article>
             <header>
-                <h2>Article #1 title</h2>
-                <p>Posted on <time datetime="2010-01-01T10:10:10+02:00">January 1st 2010</time></p>
+                <h2>TKO-Postbox</h2>
+                <p>Opened on <time datetime="<%= time %>"><%= new Date(time).toLocaleDateString() %></time></p>
             </header>
-            <p>Your article goes here.</p>
+            <p></p>
         </article>
 
         <article>
-            <header>
-                <h2>Article #2 title</h2>
-                <p>Posted on <time datetime="2010-01-01T10:10:10+02:00">January 1st 2010</time></p>
-            </header>
-            <p>Your article goes here.</p>
+              <h2>Contacts</h2>
+              <table></table>
+                  <thead>
+                      <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Subscribed</th>
+                      </tr>
+                  </thead>
+                  <tbody data-bind="foreach: contacts">
+                    <tr data-bind="component: { name: 'contact-component', params: $data }"></tr>
+                  </tbody>
+              </table>
         </article>
 
     </section>

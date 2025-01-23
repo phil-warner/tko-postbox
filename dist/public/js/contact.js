@@ -7,6 +7,7 @@ export let Contact = class {
     let self = this; 
     self.firstName = ko.observable(data.firstName);
     self.lastName = ko.observable(data.lastName);
+    self.subscribed = ko.observable(false);
   }
 
   getFullName() {
@@ -14,6 +15,7 @@ export let Contact = class {
   }
 
   subscribe($koData, event) {
+    this.subscribed(true);
     ko.postbox.publish('contact-subscribe', $koData);
   }
 };

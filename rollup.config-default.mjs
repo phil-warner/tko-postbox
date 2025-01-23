@@ -1,4 +1,5 @@
 import multi from '@rollup/plugin-multi-entry';
+import copy from 'rollup-plugin-copy';
 import html from "rollup-plugin-html";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -24,6 +25,12 @@ export default [{
       entries: [
         { find: 'knockout', replacement: '@tko/build.reference' }
       ]
+    }),
+    copy({
+      targets: [
+        { src: ['src/app.js', 'src/config', 'src/models', 'src/routers', 'src/views', 'src/public'], dest: 'dist' }
+      ],
+      flatten: false
     })
   ],
   strictDeprecations: true
