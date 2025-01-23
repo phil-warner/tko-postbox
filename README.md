@@ -1,8 +1,8 @@
-# Node Express Boilerplate.
+# TKO-Postbox.
 
-![Node-Express-Boilerplate](https://repository-images.githubusercontent.com/232512685/70107a80-31f8-11ea-9436-66c4dc25c0e2)
+![TKO-Postbox](https://repository-images.githubusercontent.com/232512685/70107a80-31f8-11ea-9436-66c4dc25c0e2)
 
-Minimalist, simple boilerplate for Node & Express.js.
+Minimalist repo to experiment with knockout-postbox and TKO.
 
 ## Installation
 
@@ -26,7 +26,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Guillaume Duhan** - *Initial work* - [Github](https://github.com/guillaumeduhan)
+* **Philip Warner** - *Initial work* - [Github](https://github.com/phil-warner)
 
 ## License
 

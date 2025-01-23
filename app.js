@@ -1,12 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const router = require('./routers/app');
+const config = require('./config/app');
 
-import config from './config'
+app.set('view engine', 'ejs');
+app.use(router);
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
 
 app.listen(config.port, function () {
-  console.log('Example app listening on port 3000!')
+  console.log(`tko-postbox listening on port ${config.port}`);
 })
