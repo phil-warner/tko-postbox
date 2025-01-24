@@ -8344,7 +8344,10 @@ let Contact = class {
 
   subscribe($koData, event) {
     this.subscribed(true);
-    ko$1.postbox.publish('contact-subscribe', $koData);
+    ko$1.postbox.publish('contact-subscribe', {
+      firstName: this.firstName(),
+      lastName: this.lastName()
+    });
   }
 };
 
@@ -8356,6 +8359,7 @@ ko$1.components.register('contact-component', {
 
 
 ko$1.postbox.subscribe('contact-subscribe', (value) => {
+  console.log(JSON.stringify(value));
   alert(`${value.firstName} ${value.lastName} subscribed`);
 });
 

@@ -10,6 +10,7 @@ ko.components.register('contact-component', {
 
 
 ko.postbox.subscribe('contact-subscribe', (value) => {
+  console.log(JSON.stringify(value));
   alert(`${value.firstName} ${value.lastName} subscribed`);
 });
 

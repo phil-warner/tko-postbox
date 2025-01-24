@@ -16,7 +16,10 @@ export let Contact = class {
 
   subscribe($koData, event) {
     this.subscribed(true);
-    ko.postbox.publish('contact-subscribe', $koData);
+    ko.postbox.publish('contact-subscribe', {
+      firstName: this.firstName(),
+      lastName: this.lastName()
+    });
   }
 };
 
